@@ -1,17 +1,21 @@
-import Player from './components/Player.jsx';
-import TimerChallenge from './components/TimerChallenge.jsx';
+import Header from './components/Header.jsx';
+import Shop from './components/Shop.jsx';
+import { DUMMY_PRODUCTS } from './dummy-products.js';
+import Product from './components/Product.jsx';
+import { CartContextProvider } from './store/shoping-cart-context.jsx';
 
 function App() {
   return (
-    <>
-      <Player />
-      <div id="challenges">
-        <TimerChallenge title="Easy" targetTime={1} />
-        <TimerChallenge title="Not Easy" targetTime={5} />
-        <TimerChallenge title="Getting tough" targetTime={10} />
-        <TimerChallenge title="Pros only" targetTime={15} />
-      </div>
-    </>
+    <CartContextProvider>
+      <Header />
+      <Shop>
+        {DUMMY_PRODUCTS.map((product) => (
+          <li key={product.id}>
+            <Product {...product} />
+          </li>
+        ))}
+      </Shop>
+    </CartContextProvider>
   );
 }
 
