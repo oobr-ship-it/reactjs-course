@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Handjet:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Lato:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -6,218 +6,175 @@
 
 body {
   margin: 0;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Lato', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: radial-gradient(#186a5e, #053339);
-  color: #e1eeeb;
+  background: linear-gradient(#222c31, #111d32);
+  color: #d9e2f1;
   min-height: 100vh;
+  font-family: 'Quicksand', sans-serif;
 }
 
-#content {
-  max-width: 60rem;
+#main-header {
   margin: 2rem auto;
-  padding: 2rem;
-  background: radial-gradient(#0b201d, #021619);
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
-}
-
-h1 {
-  font-family: 'Handjet', monospace;
   text-align: center;
-  text-transform: uppercase;
-  color: #c1e2dd;
-  text-shadow: 0 0 4px rgba(35, 34, 34, 0.4);
-  font-size: 3.5rem;
-  margin: 0;
+  font-family: 'Lato', sans-serif;
+  color: #87a7a4;
 }
 
-h1 em {
-  font-style: normal;
-  color: #00eeff;
+#main-header img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(14, 26, 28, 0.8));
 }
 
-header p {
-  font-size: 1.2rem;
-  margin: 0;
-  text-align: center;
-  color: #c6f4f2;
+#main-header h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+  letter-spacing: 0.15rem;
 }
 
-#player {
-  text-align: center;
-}
-
-#player h2 {
-  color: #54a399;
-}
-
-#player p {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#player input {
-  font: inherit;
-  border: 1px solid #54a399;
-  background-color: #192f2b;
-  border-radius: 4px;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  padding: 0.25rem;
-  color: #d1f0ec;
-}
-
-#player button {
-  cursor: pointer;
-  background-color: #54a399;
-  border: 1px solid #54a399;
-  padding: 0.4rem 1rem;
-  color: #061e1a;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-}
-
-#player button:hover {
-  background-color: #3c8379;
-  border-color: #3c8379;
-}
-
-#challenges {
+main {
+  width: 90%;
   max-width: 50rem;
-  margin: 3rem auto;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
+  margin: 2rem auto;
 }
 
-.challenge {
-  width: 22rem;
+section {
+  margin: 2rem 0;
+}
+
+#configure-counter {
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #05827e;
+  border-radius: 6px;
+  text-align: center;
   display: flex;
-  flex-direction: column;
+  gap: 0.5rem;
   align-items: center;
   justify-content: center;
+  border: none;
+}
+
+#configure-counter h2 {
+  margin: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #88dbd6;
+}
+
+#configure-counter input {
+  width: 4rem;
+  text-align: center;
+  margin: 0.5rem;
+  padding: 0.5rem 0.25rem;
+  border: 1px solid #88dbd6;
+  border-radius: 4px;
+  background-color: #0e1a1c;
+  color: #88dbd6;
+  font-size: 1rem;
+}
+
+#configure-counter input::-webkit-outer-spin-button,
+#configure-counter input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#configure-counter input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+#configure-counter button {
+  cursor: pointer;
+  background: transparent;
+  color: #96d8d6;
+  border: none;
+}
+
+#configure-counter button:hover {
+  color: #16f3eb;
+}
+
+.counter {
   padding: 2rem;
-  margin: 2rem auto;
-  background: linear-gradient(#4df8df, #4df0f8);
-  color: #221c18;
-  box-shadow: 0 2px 8px rgba(35, 34, 34, 0.6);
+  border: 1px solid #05827e;
   border-radius: 6px;
 }
 
-.challenge button {
-  margin-top: 1rem;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 4px;
-  background: #12352f;
-  color: #edfcfa;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.challenge button:hover {
-  background: #051715;
-}
-
-.challenge h2 {
+.counter p {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   font-size: 1.5rem;
-  letter-spacing: 0.1em;
-  margin: 0;
+}
+
+.counter .counter-info {
+  display: block;
+  font-size: 0.8rem;
+  color: #9dc5c4;
   text-align: center;
-  text-transform: uppercase;
-  color: #221c18;
 }
 
-.challenge-time {
-  border: 1px solid #46cebe;
-  border-radius: 4px;
-  padding: 0.25rem 0.5rem;
-  margin: 0.5rem;
-}
-
-.challenge .active {
-  animation: flash 1s infinite;
-}
-
-.result-modal {
-  border: none;
-  border-radius: 8px;
-  padding: 2rem;
-  background-color: #d7fcf8;
-}
-
-.result-modal[open] {
-  animation: slide-in-from-top 0.35s ease-out;
-}
-
-.result-modal::backdrop {
-  background: rgba(0, 0, 0, 0.9);
-}
-
-.result-modal h2 {
-  font-family: 'Handjet', monospace;
-  margin: 0 0 0.25rem 0;
+.counter-output {
   font-size: 3rem;
-  text-transform: uppercase;
+  font-weight: bold;
+  color: #b5dad7;
 }
 
-.result-modal progress {
-  width: 100%;
-  height: 1.5rem;
-  margin: 0;
-  accent-color: #46cebe;
+.counter-output.negative {
+  color: #f3a6a6;
 }
 
-.result-modal p {
-  margin: 0.5rem 0;
+.counter ol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.counter li {
+  width: 2rem;
+  margin-left: 0.5rem;
+  color: #8eb6b3;
+  padding: 0.2rem;
+}
+
+.counter li:first-child {
+  color: #87f0e9;
+  font-weight: bold;
   font-size: 1.2rem;
 }
 
-.result-modal p strong {
-  color: #10655b;
+.counter li.selected {
+  background-color: #335453;
+  color: #d9f7f6;
+  border-radius: 4px;
 }
 
-.result-modal form {
-  text-align: right;
-}
-
-.result-modal button {
-  margin-top: 1rem;
+.button {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
   padding: 0.5rem 1rem;
+  background-color: #16f3eb;
+  color: #051a19;
   border: none;
   border-radius: 4px;
-  background: #12352f;
-  color: #edfcfa;
-  font-size: 1.2rem;
-  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
 }
 
-.result-modal button:hover {
-  background: #051715;
-}
-
-@keyframes slide-in-from-top {
-  0% {
-    transform: translateY(-15%);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes flash {
-  0% {
-    opacity: 0.5;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.5;
-  }
+.button-icon {
+  color: #051a19;
+  height: 0.9rem;
 }
