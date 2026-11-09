@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/meals/layout,_N_T_/meals/page,_N_T_/meals"
+  },
+  "routeCache": {
+    "key": "/route-cache/APP_PAGE/1402920530353901bc81fedd191b0a92f238eb9c9abd979abadb7612a34c4174/$/meals",
+    "owner": {
+      "kind": "APP_PAGE",
+      "sourceRoute": "/meals/page"
+    },
+    "isFallback": false
+  }
+}
